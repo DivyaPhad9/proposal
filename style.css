@@ -1,0 +1,352 @@
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top right, #ffe0ec, #ffe6f7);
+      font-family: 'Segoe UI', sans-serif;
+      height: auto;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      max-width: 420px;
+      position: relative;
+      z-index: 10;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .heart {
+      font-size: 70px;
+      animation: beat 1s infinite;
+      color: #ff3366;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    h2 {
+      color: #d63384;
+      margin: 20px 0 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .message-box {
+      background: #fff0f5;
+      padding: 15px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      color: #333;
+      font-style: italic;
+    }
+
+    button {
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .yes-btn {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    .yes-btn:hover {
+      background-color: #e6004c;
+    }
+
+    .think-btn {
+      background-color: #ffd166;
+      color: #333;
+    }
+
+    .think-btn:hover {
+      background-color: #ffb703;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .gallery {
+  margin-top: 60px;
+  text-align: center;
+  color: #d63384;
+  padding-bottom: 60px;
+}
+
+.gallery h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-grid img {
+  border-radius: 15px;
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+section {
+  margin: 60px auto;
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+  background: #fff0f6;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+h3 {
+  color: #d63384;
+  margin-bottom: 15px;
+}
+
+.love-letter .letter-box {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  color: #444;
+  background: #fffafc;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.countdown #timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d63384;
+}
+
+.timeline ul {
+  list-style-type: none;
+  padding: 0;
+  color: #555;
+}
+.timeline li {
+  margin: 10px 0;
+}
+
+.poem blockquote {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  background: #ffeef8;
+  padding: 20px;
+  border-left: 5px solid #ff4d6d;
+  border-radius: 10px;
+}
+
+.surprise button {
+  background: #ff4d6d;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.surprise #gift-box {
+  margin-top: 20px;
+}
+.surprise img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+.surprise p {
+  font-size: 18px;
+  color: #d63384;
+  margin-top: 10px;
+}
+
+.love-meter .meter-container {
+  width: 100%;
+  background: #ffe0ec;
+  height: 30px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+.meter-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #ff4d6d, #ff99aa);
+  animation: fillLove 5s forwards;
+  border-radius: 25px;
+}
+
+@keyframes fillLove {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+    .center-message {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .center-message h1 {
+      color: #d6336c;
+      font-size: 2.5em;
+    }
+
+    .center-message p {
+      font-size: 1.2em;
+      color: #333;
+    }
+
+
+
+
+
+
+    .cute-button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+     
+      border-radius: 30px;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      animation: bounce 2s infinite;
+      transition: background 0.3s;
+    }
+
+    .cute-button:hover {
+      background-color: #ff85c1;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+     body {
+      background: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #d6336c;
+      margin-bottom: 30px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: white;
+      background-color: #ff69b4;
+      padding: 10px 25px;
+      border-radius: 20px;
+      font-size: 1rem;
+    }
